@@ -187,6 +187,58 @@ nav.bot .fab{width:64px;height:64px;min-width:64px;border-radius:50%;background:
 @keyframes drop{from{transform:translate(-50%,-40px);opacity:0}}
 .hearts{position:fixed;pointer-events:none;z-index:95;font-size:2rem;animation:fly 1s ease-out forwards}
 @keyframes fly{to{transform:translateY(-120px) scale(1.6);opacity:0}}
+
+/* ---------- v2 ---------- */
+.step{animation:in .35s ease both;display:flex;flex-direction:column}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.who-grid button{background:#fff;border:2px solid var(--line);border-radius:20px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:800;font-size:.9rem;line-height:1.2;text-align:center;transition:transform .1s}
+.who-grid button .e{font-size:2.2rem}
+.who-grid button.nouveau{border-style:dashed;color:var(--accent-d)}
+.who-grid button:active{transform:scale(.95)}
+.pin-dots{display:flex;justify-content:center;gap:18px;margin:22px 0 8px}
+.pin-dots i{width:18px;height:18px;border-radius:50%;border:2.5px solid var(--ink);transition:.15s}
+.pin-dots i.on{background:var(--ink);transform:scale(1.1)}
+.pin-dots.shake{animation:shake .4s}
+@keyframes shake{20%,60%{transform:translateX(-10px)}40%,80%{transform:translateX(10px)}}
+.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:300px;width:100%;margin:10px auto 0}
+.pad button{height:68px;border-radius:22px;background:#fff;box-shadow:var(--shadow);font-size:1.7rem;font-weight:700;font-family:Fraunces,Georgia,serif}
+.pad button:active{background:var(--soft);transform:scale(.95)}
+.pad button.ghost{background:none;box-shadow:none;font-size:1.3rem}
+.back{color:var(--muted);font-weight:800;padding:8px 0;margin-bottom:4px;align-self:flex-start}
+.month{font-family:Fraunces,Georgia,serif;font-size:1.3rem;margin:26px 4px 6px;display:flex;align-items:center;gap:10px}
+.month::after{content:"";flex:1;height:1.5px;background:var(--line)}
+.hero-card{border-radius:var(--r);padding:18px;margin:12px 0;background:linear-gradient(135deg,#FFF1E8,#FCE0D3);box-shadow:var(--shadow);display:flex;align-items:center;gap:16px;animation:in .4s ease both}
+.hero-card .big{font-size:3rem;width:76px;height:76px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;box-shadow:var(--shadow)}
+.hero-card h2{font-size:1.5rem}
+.hero-card p{margin:2px 0 0;color:var(--accent-d);font-weight:800}
+.hero-card small{display:block;color:var(--muted);font-weight:700;margin-top:2px}
+.bday{background:linear-gradient(135deg,#FFC65C,#FC6E62);color:#fff;text-align:center;padding:22px 16px;border-radius:var(--r);margin:12px 0;box-shadow:0 10px 28px rgba(252,98,98,.35)}
+.bday .e{font-size:3rem;animation:float 2s ease-in-out infinite}
+.bday h2{font-size:1.5rem;margin-top:4px}
+.bday p{margin:4px 0 0;font-weight:800;opacity:.95}
+.confetti{position:fixed;top:-20px;z-index:96;pointer-events:none;width:10px;height:14px;border-radius:2px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+.seen{color:var(--muted);font-size:.82rem;margin-top:6px}
+.quick{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-top:10px}
+.quick::-webkit-scrollbar{display:none}
+.quick button{flex:none;background:#F7F1E9;border-radius:999px;padding:7px 12px;font-weight:700;font-size:.88rem}
+.quick button:active{background:var(--soft)}
+.cin .mic{background:#F7F1E9;color:var(--ink);padding:0;width:46px;flex:none;font-size:1.2rem}
+.rec{display:flex;align-items:center;gap:8px;margin-top:8px;background:var(--soft);border-radius:999px;padding:6px 6px 6px 16px}
+.rec .dot{width:12px;height:12px;border-radius:50%;background:#E5342B;animation:blink 1s infinite;flex:none}
+@keyframes blink{50%{opacity:.25}}
+.rec .tm{font-weight:800;flex:1;font-variant-numeric:tabular-nums}
+.rec button{border-radius:999px;padding:0 14px;min-height:42px;font-weight:800}
+.rec .ok{background:var(--accent);color:#fff}
+.voice{display:inline-flex;align-items:center;gap:10px;background:var(--soft);border-radius:999px;padding:6px 14px 6px 6px;margin-top:3px;min-width:180px;cursor:pointer}
+.voice .pl{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:.8rem;flex:none}
+.voice .bar{flex:1;height:5px;border-radius:3px;background:rgba(185,76,51,.2);overflow:hidden;min-width:70px}
+.voice .bar i{display:block;height:100%;width:0;background:var(--accent-d)}
+.voice small{font-weight:800;color:var(--accent-d);font-size:.78rem;font-variant-numeric:tabular-nums}
+.badge{background:var(--gold);color:var(--ink);font-size:.68rem;font-weight:800;padding:2px 8px;border-radius:99px;margin-left:6px;vertical-align:2px}
+.pinbox{font-family:Fraunces,Georgia,serif;font-size:2.6rem;letter-spacing:.3em;text-align:center;background:#fff;border-radius:18px;padding:14px;margin:14px 0;box-shadow:var(--shadow)}
+.notice{display:flex;gap:12px;align-items:center;background:#FFF6DF;border:1.5px solid #F3DDA5;border-radius:20px;padding:14px 16px;margin:12px 0;font-weight:700;width:100%;text-align:left}
+.notice .e{font-size:1.6rem}
 </style>
 </head>
 <body>
@@ -201,19 +253,7 @@ nav.bot .fab{width:64px;height:64px;min-width:64px;border-radius:50%;background:
 </section>
 
 <!-- Entrée dans la famille -->
-<section id="s-join" class="center hidden">
-  <div class="hero">👨‍👩‍👧‍👦</div>
-  <h1 id="j-title">Notre album</h1>
-  <p class="s">Les photos et vidéos de la famille, rien que pour nous.</p>
-  <label class="l" for="j-code">Code familial</label>
-  <input id="j-code" class="field" autocomplete="off" autocapitalize="off" placeholder="Le code qu'on t'a donné">
-  <label class="l" for="j-name">Ton prénom (ou Papi, Mamie…)</label>
-  <input id="j-name" class="field" maxlength="40" placeholder="Ex. Mamie Josette">
-  <label class="l">Choisis ton avatar</label>
-  <div class="emojis" id="j-emojis"></div>
-  <div class="err" id="j-err"></div>
-  <button class="btn" id="j-go">Entrer dans l'album ✨</button>
-</section>
+<section id="s-join" class="center hidden"><div id="join-box"></div></section>
 
 <!-- Appli -->
 <section id="s-app" class="hidden">
@@ -223,6 +263,7 @@ nav.bot .fab{width:64px;height:64px;min-width:64px;border-radius:50%;background:
   </header>
 
   <main id="v-feed">
+    <div id="hero"></div>
     <div id="memories"></div>
     <div id="feed"></div>
     <div class="more-load" id="more"></div>
@@ -256,7 +297,7 @@ const BUCKET = 'famille', PAGE = 12, MAX_UPLOAD_MB = 50, COMPRESS_ABOVE_MB = 12,
 const EMOJIS = ['👵','👴','👩','👨','👧','👦','👶','🧑','👩‍🦳','👨‍🦳','🙂','🌻','🐻','🦊','🐱','🌈'];
 const CHILD_EMOJIS = ['🧒','👧','👦','👶','🦁','🐰','🦄','🐻','🚀','🌸','⚽','🦖'];
 let sb, me = null, myId = null;
-const S = { members:{}, children:[], posts:[], filter:null, done:false, loading:false,
+const S = { me:{}, lastMonth:null, members:{}, children:[], posts:[], filter:null, done:false, loading:false,
   lastSeen: +localStorage.getItem('lastSeen') || 0, view:'feed', pending:[] };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -275,7 +316,7 @@ function ago(d){
 function longDate(d){ return new Date(d + 'T12:00').toLocaleDateString('fr-FR', { weekday:'long', day:'numeric', month:'long', year:'numeric' }); }
 function ageAt(birth, at){
   if (!birth) return '';
-  const b = new Date(birth + 'T12:00'), a = new Date((at || new Date().toISOString().slice(0,10)) + 'T12:00');
+  const b = new Date(birth + 'T12:00'), a = new Date((at || localISO()) + 'T12:00');
   let m = (a.getFullYear() - b.getFullYear()) * 12 + a.getMonth() - b.getMonth(); if (a.getDate() < b.getDate()) m--;
   if (m < 0) return '';
   if (m < 1) { const d = Math.round((a - b) / 864e5); return d <= 1 ? 'nouveau-né' : `${d} jours`; }
@@ -315,74 +356,152 @@ async function init(){
   sb = supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY, { auth: { persistSession: true, autoRefreshToken: true } });
   let famName = 'Notre album';
   try { const fam = await sb.rpc('family_name'); if (fam.data) famName = fam.data; } catch {}
-  $('#j-title').textContent = famName; $('#fam-title').textContent = famName; document.title = famName;
+  $('#fam-title').textContent = famName; document.title = famName;
   const { data: { session } } = await sb.auth.getSession();
   if (session) {
-    const { data: ok } = await sb.rpc('is_member');
-    if (ok) return enter(session.user.id);
+    const { data: w } = await sb.rpc('whoami');
+    if (w?.id) return enter(w);
   }
   setupJoin();
 }
 
-function setupJoin(){
-  show('s-join');
-  let pick = '👵';
-  const box = $('#j-emojis');
-  box.innerHTML = EMOJIS.map(e => `<button data-e="${e}" class="${e===pick?'on':''}">${e}</button>`).join('');
-  box.onclick = e => { const b = e.target.closest('button'); if (!b) return; pick = b.dataset.e; box.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); };
-  $('#j-go').onclick = async () => {
-    const code = $('#j-code').value.trim(), name = $('#j-name').value.trim(), err = $('#j-err');
-    if (!code || !name) { err.textContent = 'Il faut le code et ton prénom 🙂'; return; }
-    const btn = $('#j-go'); btn.disabled = true; btn.textContent = 'Vérification…'; err.textContent = '';
-    try {
-      let { data: { session } } = await sb.auth.getSession();
-      if (!session) {
-        const r = await sb.auth.signInAnonymously();
-        if (r.error) throw new Error("Connexion impossible (active « Anonymous sign-ins » dans Supabase).");
-        session = r.data.session;
-      }
-      const { data, error } = await sb.rpc('join_family', { p_code: code, p_name: name, p_emoji: pick });
-      if (error) throw error;
-      if (!data) { err.textContent = 'Code incorrect, réessaie 🔒'; return; }
-      enter(session.user.id, true);
-    } catch (e) { err.textContent = e.message || 'Oups, une erreur. Réessaie.'; }
-    finally { btn.disabled = false; btn.textContent = "Entrer dans l'album ✨"; }
-  };
+/* ---------- Entrée : code familial → « Qui es-tu ? » → code perso ---------- */
+const J = { code:'', members:[], pick:null, pin:'', emoji:'👵' };
+function setupJoin(){ show('s-join'); joinStep('code'); }
+function pinPadHTML(){
+  return `<div class="pin-dots" id="pin-dots">${'<i></i>'.repeat(4)}</div>
+    <div class="pad">${[1,2,3,4,5,6,7,8,9].map(n => `<button data-k="${n}">${n}</button>`).join('')}<span></span><button data-k="0">0</button><button class="ghost" data-k="del" aria-label="Effacer">⌫</button></div>`;
 }
+function joinStep(step){
+  const box = $('#join-box'), fam = esc(document.title);
+  if (step === 'code') box.innerHTML = `<div class="step"><div class="hero">👨‍👩‍👧‍👦</div><h1>${fam}</h1>
+    <p class="s">Les photos et vidéos de la famille, rien que pour nous 💛</p>
+    <label class="l" for="j-code">Code familial</label>
+    <input id="j-code" class="field" autocomplete="off" autocapitalize="off" placeholder="Le code qu'on t'a donné" value="${esc(J.code)}">
+    <div class="err" id="j-err"></div><button class="btn" id="j-go">Continuer →</button></div>`;
+  if (step === 'who') box.innerHTML = `<div class="step"><button class="back" data-back="code">← Retour</button>
+    <h1>Qui es-tu ?</h1><p class="s">Touche ton prénom</p>
+    <div class="who-grid">${J.members.map(m => `<button data-m="${m.id}"><span class="e">${esc(m.emoji)}</span>${esc(m.name)}</button>`).join('')}
+    <button class="nouveau" data-new><span class="e">✨</span>Je suis nouveau</button></div><div class="err" id="j-err"></div></div>`;
+  if (step === 'pin') { const m = J.members.find(x => x.id === J.pick); J.pin = '';
+    box.innerHTML = `<div class="step"><button class="back" data-back="who">← Retour</button>
+    <div class="hero" style="font-size:3.4rem">${esc(m.emoji)}</div><h1>Coucou ${esc(m.name)} !</h1>
+    <p class="s">Tape ton code perso à 4 chiffres</p>${pinPadHTML()}<div class="err" id="j-err"></div></div>`; }
+  if (step === 'new') {
+    box.innerHTML = `<div class="step"><button class="back" data-back="${J.members.length ? 'who' : 'code'}">← Retour</button>
+    <h1>Bienvenue ! 🎉</h1>
+    <label class="l" for="j-name">Ton prénom (ou Papi, Mamie…)</label>
+    <input id="j-name" class="field" maxlength="40" placeholder="Ex. Mamie Josette">
+    <label class="l">Choisis ton avatar</label><div class="emojis" id="j-emojis">${EMOJIS.map(e => `<button data-e="${e}" class="${e===J.emoji?'on':''}">${e}</button>`).join('')}</div>
+    <label class="l" for="j-pin">Invente ton code perso (4 chiffres)</label>
+    <input id="j-pin" class="field" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="••••" style="letter-spacing:.4em;font-size:1.4rem">
+    <p style="color:var(--muted);font-size:.88rem;margin:6px 2px 0">Il te servira à te reconnecter si tu changes de téléphone. Retiens-le bien 😉</p>
+    <div class="err" id="j-err"></div><button class="btn" id="j-create">Entrer dans l'album ✨</button></div>`; }
+}
+async function ensureSession(){
+  let { data: { session } } = await sb.auth.getSession();
+  if (!session) {
+    const r = await sb.auth.signInAnonymously();
+    if (r.error) throw new Error("Connexion impossible (active « Anonymous sign-ins » dans Supabase).");
+    session = r.data.session;
+  }
+  return session;
+}
+const jerr = t => { const e = $('#j-err'); if (e) e.textContent = t; };
+$('#join-box').addEventListener('click', async e => {
+  const t = e.target.closest('button'); if (!t) return;
+  if (t.dataset.back) return joinStep(t.dataset.back);
+  if (t.id === 'j-go') {
+    J.code = $('#j-code').value.trim(); if (!J.code) return jerr('Tape le code familial 🙂');
+    t.disabled = true; t.textContent = 'Vérification…';
+    try {
+      await ensureSession();
+      const { data, error } = await sb.rpc('family_members', { p_code: J.code });
+      if (error) throw error;
+      if (!data?.ok) { t.disabled = false; t.textContent = 'Continuer →'; return jerr('Code incorrect, réessaie 🔒'); }
+      J.members = data.members || []; joinStep(J.members.length ? 'who' : 'new');
+    } catch (err) { t.disabled = false; t.textContent = 'Continuer →'; jerr(err.message || 'Oups, réessaie.'); }
+    return;
+  }
+  if (t.dataset.m) {
+    const m = J.members.find(x => x.id === t.dataset.m);
+    if (!m.has_pin) return jerr(`${m.name} n'a pas encore de code perso : demande à l'admin de l'album de t'en créer un (onglet Famille).`);
+    J.pick = m.id; return joinStep('pin');
+  }
+  if (t.dataset.new !== undefined) return joinStep('new');
+  if (t.dataset.e) { J.emoji = t.dataset.e; document.querySelectorAll('#j-emojis button').forEach(x => x.classList.toggle('on', x === t)); return; }
+  if (t.dataset.k) {
+    if (J.busy) return;
+    if (t.dataset.k === 'del') J.pin = J.pin.slice(0, -1); else if (J.pin.length < 4) J.pin += t.dataset.k;
+    if (navigator.vibrate) navigator.vibrate(8);
+    document.querySelectorAll('#pin-dots i').forEach((d, i) => d.classList.toggle('on', i < J.pin.length));
+    if (J.pin.length === 4) {
+      jerr(''); J.busy = true;
+      const { data: st, error } = await sb.rpc('claim_member', { p_code: J.code, p_member: J.pick, p_pin: J.pin });
+      J.busy = false;
+      if (st === 'ok') { const { data: w } = await sb.rpc('whoami'); return enter(w, 'back'); }
+      const dots = $('#pin-dots'); dots.classList.remove('shake'); void dots.offsetWidth; dots.classList.add('shake');
+      if (navigator.vibrate) navigator.vibrate([40, 40, 40]);
+      J.pin = ''; setTimeout(() => dots.querySelectorAll('i').forEach(d => d.classList.remove('on')), 350);
+      jerr(error ? 'Oups, réessaie.' : st === 'pin' ? 'Mauvais code perso, réessaie 🔒'
+        : st === 'locked' ? 'Trop d’essais : demande à l’admin de te créer un nouveau code.'
+        : st === 'code' ? 'Le code familial a changé, reviens en arrière.' : 'Oups, réessaie.');
+    }
+    return;
+  }
+  if (t.id === 'j-create') {
+    const name = $('#j-name').value.trim(), pin = $('#j-pin').value.trim();
+    if (!name) return jerr('Il manque ton prénom 🙂');
+    if (!/^\d{4}$/.test(pin)) return jerr('Le code perso doit faire 4 chiffres');
+    if (J.members.some(m => m.name.trim().toLowerCase() === name.toLowerCase())) return jerr(`« ${name} » existe déjà : reviens en arrière et touche ton prénom.`);
+    t.disabled = true; t.textContent = 'Création…';
+    try {
+      await ensureSession();
+      const { data, error } = await sb.rpc('join_family', { p_code: J.code, p_name: name, p_emoji: J.emoji, p_pin: pin });
+      if (error) throw error;
+      if (!data) throw new Error('Code familial incorrect');
+      const { data: w } = await sb.rpc('whoami'); enter(w, 'new');
+    } catch (err) { jerr(err.message || 'Oups, réessaie.'); t.disabled = false; t.textContent = "Entrer dans l'album ✨"; }
+  }
+});
 
-async function enter(uid, first){
-  myId = uid; show('s-app');
+async function enter(w, how){
+  S.me = w || {}; myId = S.me.id; show('s-app');
   await Promise.all([loadMembers(), loadChildren()]);
   me = S.members[myId];
   $('#me-btn').textContent = me?.emoji || '🙂';
-  sb.from('members').update({ last_seen: new Date().toISOString() }).eq('id', myId).then(()=>{});
-  renderChips();
+  sb.rpc('touch').then(() => {}); syncPush();
+  renderChips(); renderTop();
   await loadPosts(true);
   loadMemories();
   subscribe();
-  if (first) toast(`Bienvenue ${me?.name || ''} ! 🎉`);
+  if (how === 'new') { toast(`Bienvenue ${me?.name || ''} ! 🎉`); confetti(); }
+  else if (how === 'back') toast(`Content de te revoir ${me?.name || ''} ! 💛`);
   else {
     const n = S.posts.filter(p => p.author !== myId && new Date(p.created_at) > S.lastSeen).length;
     if (n && S.lastSeen) toast(`${n} nouveauté${n>1?'s':''} depuis ta dernière visite 💌`, 3500);
+    const newbies = Object.values(S.members).filter(m => m.id !== myId && S.lastSeen && new Date(m.created_at) > S.lastSeen);
+    newbies.forEach((m, i) => setTimeout(() => toast(`${m.emoji} ${m.name} a rejoint l’album !`, 3200), 3800 * (i + (n ? 1 : 0))));
   }
   setTimeout(() => localStorage.setItem('lastSeen', Date.now()), 4000);
   if ('clearAppBadge' in navigator) navigator.clearAppBadge().catch(()=>{});
 }
 
-async function loadMembers(){ const { data } = await sb.from('members').select('*'); S.members = {}; (data||[]).forEach(m => S.members[m.id] = m); }
+async function loadMembers(){ const { data } = await sb.from('members').select('id,name,emoji,created_at,last_seen,is_admin'); S.members = {}; (data||[]).forEach(m => S.members[m.id] = m); }
 async function loadChildren(){ const { data } = await sb.from('children').select('*').order('birth_date', { ascending: true, nullsFirst: false }); S.children = data || []; }
 
 /* ---------- Fil ---------- */
-const SELECT = '*, media(*), reactions(*), comments(*)';
+const SELECT = '*, media(*), reactions(*), comments(*), post_views(*)';
+const pathsOf = p => [...p.media.map(m => m.thumb_path || (m.kind === 'image' ? m.path : null)), ...p.comments.map(c => c.audio_path)];
 function normalize(p){
   p.media = (p.media||[]).sort((a,b) => a.position - b.position);
   p.comments = (p.comments||[]).sort((a,b) => new Date(a.created_at) - new Date(b.created_at));
-  p.reactions = p.reactions || []; return p;
+  p.reactions = p.reactions || []; p.post_views = p.post_views || []; return p;
 }
 async function loadPosts(reset){
   if (S.loading || (!reset && S.done)) return;
   S.loading = true; $('#more').innerHTML = '<div class="spin"></div>';
-  if (reset) { S.posts = []; S.done = false; }
+  if (reset) { S.posts = []; S.done = false; S.lastMonth = null; }
   let q = sb.from('posts').select(SELECT).eq('ready', true).order('created_at', { ascending:false }).range(S.posts.length, S.posts.length + PAGE - 1);
   if (S.filter) q = q.contains('child_ids', [S.filter]);
   const { data, error } = await q;
@@ -390,11 +509,12 @@ async function loadPosts(reset){
   if (error) { $('#more').textContent = 'Impossible de charger 😕'; return; }
   const list = (data||[]).map(normalize);
   if (list.length < PAGE) S.done = true;
-  await sign(list.flatMap(p => p.media.map(m => m.thumb_path || (m.kind==='image' ? m.path : null))));
+  await sign(list.flatMap(pathsOf));
   S.posts.push(...list);
   const feed = $('#feed');
   if (reset) feed.innerHTML = '';
-  feed.insertAdjacentHTML('beforeend', list.map(postHTML).join(''));
+  feed.insertAdjacentHTML('beforeend', withMonths(list));
+  observeCards();
   if (!S.posts.length) feed.innerHTML = emptyHTML();
   $('#more').innerHTML = S.done && S.posts.length ? '<span>C’est tout pour le moment 🌙</span>' : '';
 }
@@ -414,6 +534,7 @@ function postHTML(p){
     </div>`).join('');
   const liked = p.reactions.some(r => r.member_id === myId);
   const likers = p.reactions.map(r => member(r.member_id).name);
+  const viewers = p.post_views.filter(v => v.member_id !== p.author && S.members[v.member_id]).map(v => member(v.member_id).name);
   const tags = p.child_ids.map(child).filter(Boolean).map(c => {
     const age = ageAt(c.birth_date, p.taken_at); return `<span class="tag">${esc(c.emoji)} ${esc(c.name)}${age ? ' · ' + age : ''}</span>`; }).join('');
   const sameDay = p.taken_at === p.created_at.slice(0,10);
@@ -432,6 +553,7 @@ function postHTML(p){
         <button class="act" data-act="focus"><span class="h">💬</span>${p.comments.length || ''}</button>
       </div>
       ${likers.length ? `<div class="likers">❤️ ${esc(likers.slice(0,3).join(', '))}${likers.length>3 ? ` et ${likers.length-3} autre${likers.length>4?'s':''}` : ''}</div>` : ''}
+      ${viewers.length ? `<div class="seen">👀 Vu par ${esc(viewers.slice(0,4).join(', '))}${viewers.length>4 ? ` et ${viewers.length-4} autre${viewers.length>5?'s':''}` : ''}</div>` : ''}
       ${commentsHTML(p)}
     </div></article>`;
 }
@@ -440,12 +562,14 @@ function commentsHTML(p, all){
   return `<div class="coms">
     ${p.comments.length > list.length ? `<button class="allc" data-act="allc">Voir les ${p.comments.length} commentaires</button>` : ''}
     ${list.map(c => { const a = member(c.author); return `<div class="com"><div class="av">${esc(a.emoji)}</div>
-      <div class="tx"><b>${esc(a.name)}</b>${esc(c.body)}<small>${ago(c.created_at)}</small></div>
+      <div class="tx"><b>${esc(a.name)}</b>${c.audio_path ? voiceHTML(c) : esc(c.body)}<small>${ago(c.created_at)}</small></div>
       ${c.author === myId ? `<button class="x" data-act="delc" data-c="${c.id}">✕</button>` : ''}</div>`; }).join('')}
-    <form class="cin" data-act="com"><input placeholder="Un petit mot…" maxlength="1000" enterkeyhint="send"><button>Envoyer</button></form>
+    <div class="quick">${QUICK.map(q => `<button data-act="quick" data-q="${q}">${q}</button>`).join('')}</div>
+    <form class="cin" data-act="com"><input placeholder="Un petit mot…" maxlength="1000" enterkeyhint="send"><button type="button" class="mic" data-act="mic" aria-label="Message vocal">🎙️</button><button>Envoyer</button></form>
   </div>`;
 }
 function rerender(id){
+  if (REC?.postId === id) return;
   const p = S.posts.find(x => x.id === id), el = document.querySelector(`.card[data-id="${id}"]`);
   if (!p || !el) return;
   const pos = el.querySelector('.car')?.scrollLeft || 0, typed = el.querySelector('.cin input')?.value || '', focused = document.activeElement === el.querySelector('.cin input');
@@ -453,11 +577,12 @@ function rerender(id){
   const n = document.querySelector(`.card[data-id="${id}"]`); n.style.animation = 'none';
   const car = n.querySelector('.car'); if (car) car.scrollLeft = pos;
   const inp = n.querySelector('.cin input'); inp.value = typed; if (focused) inp.focus();
+  observeCards();
 }
 async function refetch(id){
   const { data } = await sb.from('posts').select(SELECT).eq('id', id).maybeSingle();
   if (!data) return null;
-  normalize(data); await sign(data.media.map(m => m.thumb_path || (m.kind==='image'?m.path:null)));
+  normalize(data); await sign(pathsOf(data));
   const i = S.posts.findIndex(x => x.id === id);
   if (i >= 0) { data._all = S.posts[i]._all; S.posts[i] = data; rerender(id); }
   return data;
@@ -468,22 +593,204 @@ $('#feed').addEventListener('click', async e => {
   const t = e.target.closest('[data-act]'); if (!t) return;
   const card = t.closest('.card'), id = card?.dataset.id, p = S.posts.find(x => x.id === id);
   const act = t.dataset.act;
-  if (act === 'open') openLightbox(p.media, +t.dataset.i, p);
+  if (act === 'open') {   // 1 tap = ouvrir, 2 taps = ❤️
+    if (tapEl === t && tapT) { clearTimeout(tapT); tapT = tapEl = null;
+      if (!p.reactions.some(r => r.member_id === myId)) like(p, e); else hearts(e.clientX, e.clientY); return; }
+    const i = +t.dataset.i; tapEl = t; tapT = setTimeout(() => { tapT = tapEl = null; openLightbox(p.media, i, p); }, 280);
+  }
+  if (act === 'quick') sendComment(p, t.dataset.q);
+  if (act === 'mic') startRec(card, id);
+  if (act === 'rec-x') stopRec(false);
+  if (act === 'rec-ok') stopRec(true);
+  if (act === 'play') playVoice(t);
   if (act === 'like') like(p, e);
   if (act === 'focus') card.querySelector('.cin input').focus();
   if (act === 'allc') { p._all = true; rerender(id); }
-  if (act === 'delc') { await sb.from('comments').delete().eq('id', t.dataset.c); p.comments = p.comments.filter(c => c.id !== t.dataset.c); rerender(id); }
+  if (act === 'delc') {
+    const c = p.comments.find(x => x.id === t.dataset.c);
+    await sb.from('comments').delete().eq('id', t.dataset.c);
+    if (c?.audio_path) sb.storage.from(BUCKET).remove([c.audio_path]);
+    p.comments = p.comments.filter(x => x.id !== t.dataset.c); rerender(id);
+  }
   if (act === 'menu') postMenu(p);
 });
 $('#feed').addEventListener('submit', async e => {
   e.preventDefault(); const f = e.target, inp = f.querySelector('input'), body = inp.value.trim(); if (!body) return;
-  const id = f.closest('.card').dataset.id, p = S.posts.find(x => x.id === id);
+  const p = S.posts.find(x => x.id === f.closest('.card').dataset.id);
   inp.value = '';
-  const { data, error } = await sb.from('comments').insert({ post_id: id, author: myId, body }).select().single();
-  if (error) { toast('Commentaire non envoyé 😕'); inp.value = body; return; }
-  if (!p.comments.some(c => c.id === data.id)) p.comments.push(data);
-  rerender(id);
+  if (!await sendComment(p, body)) inp.value = body;
 });
+let tapT = null, tapEl = null;
+async function sendComment(p, body){
+  const { data, error } = await sb.from('comments').insert({ post_id: p.id, author: myId, body }).select().single();
+  if (error) { toast('Commentaire non envoyé 😕'); return false; }
+  if (!p.comments.some(c => c.id === data.id)) p.comments.push(data);
+  rerender(p.id); notify('comment', data.id); return true;
+}
+
+/* ---------- Messages vocaux ---------- */
+const QUICK = ['❤️', '😍 Trop mignon !', '😂', '👏 Bravo !', '🥰 Gros bisous'];
+const fmtT = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+function voiceHTML(c){ return `<span class="voice" data-act="play" data-src="${esc(url(c.audio_path))}"><span class="pl">▶</span><span class="bar"><i></i></span><small>🎙️ Vocal</small></span>`; }
+let player = null, playerEl = null;
+function playVoice(el){
+  if (playerEl === el && player) { player.paused ? player.play() : player.pause(); return; }
+  player?.pause();
+  player = new Audio(el.dataset.src); playerEl = el;
+  const pl = el.querySelector('.pl'), bar = el.querySelector('.bar i'), sm = el.querySelector('small');
+  player.ontimeupdate = () => { bar.style.width = (player.currentTime / (player.duration || 1) * 100) + '%'; sm.textContent = fmtT(player.currentTime); };
+  player.onplay = () => pl.textContent = '❚❚';
+  player.onpause = () => pl.textContent = '▶';
+  player.onended = () => { bar.style.width = '0'; sm.textContent = '🎙️ Vocal'; playerEl = null; };
+  player.play().catch(() => toast('Lecture impossible 😕'));
+}
+let REC = null;
+async function startRec(card, id){
+  if (REC) return;
+  if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) return toast('Les vocaux ne marchent pas sur ce navigateur 😕');
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const mime = ['audio/webm;codecs=opus', 'audio/mp4', 'audio/webm'].find(t => MediaRecorder.isTypeSupported(t));
+    const rec = new MediaRecorder(stream, mime ? { mimeType: mime, audioBitsPerSecond: 64000 } : undefined);
+    REC = { postId: id, rec, stream, chunks: [], t0: Date.now(), send: false };
+    rec.ondataavailable = e => e.data.size && REC?.chunks.push(e.data);
+    const form = card.querySelector('.cin'); form.classList.add('hidden'); card.querySelector('.quick')?.classList.add('hidden');
+    form.insertAdjacentHTML('afterend', `<div class="rec"><span class="dot"></span><span class="tm">0:00</span><button data-act="rec-x">Annuler</button><button class="ok" data-act="rec-ok">Envoyer ➤</button></div>`);
+    const tm = card.querySelector('.rec .tm');
+    REC.timer = setInterval(() => { const sec = (Date.now() - REC.t0) / 1000; tm.textContent = `${fmtT(sec)} / 1:00`; if (sec >= 60) stopRec(true); }, 250);
+    rec.onstop = async () => {
+      const r = REC; clearInterval(r.timer); stream.getTracks().forEach(t => t.stop());
+      const blob = new Blob(r.chunks, { type: (rec.mimeType || 'audio/webm').split(';')[0] });
+      REC = null;
+      if (!r.send || !blob.size || Date.now() - r.t0 < 700) return rerender(r.postId);
+      const ext = blob.type.includes('mp4') ? 'm4a' : 'webm';
+      const path = `${r.postId}/voice-${Date.now()}-${Math.random().toString(36).slice(2, 6)}.${ext}`;
+      toast('Envoi du message vocal… 🎙️', 1500);
+      const up = await sb.storage.from(BUCKET).upload(path, blob, { contentType: blob.type });
+      if (up.error) { toast('Message vocal non envoyé 😕'); return rerender(r.postId); }
+      const { data, error } = await sb.from('comments').insert({ post_id: r.postId, author: myId, audio_path: path }).select().single();
+      if (error) { sb.storage.from(BUCKET).remove([path]); toast('Message vocal non envoyé 😕'); return rerender(r.postId); }
+      await sign([path]);
+      const p = S.posts.find(x => x.id === r.postId);
+      if (p && !p.comments.some(c => c.id === data.id)) p.comments.push(data);
+      rerender(r.postId); toast('Message vocal envoyé 💌'); notify('comment', data.id);
+    };
+    rec.start(500);
+    if (navigator.vibrate) navigator.vibrate(20);
+  } catch (e) { REC = null; toast('Autorise l’accès au micro pour envoyer un vocal 🎙️', 3500); }
+}
+function stopRec(send){ if (!REC || REC.rec.state === 'inactive') return; REC.send = send; REC.rec.stop(); }
+
+/* ---------- « Vu par » ---------- */
+const seenQ = new Set(); let seenT = null;
+const seenIO = new IntersectionObserver(es => es.forEach(en => {
+  if (en.isIntersecting) en.target._st = setTimeout(() => markSeen(en.target.dataset.id), 1200); else clearTimeout(en.target._st);
+}), { threshold: 0.35 });
+function observeCards(){ document.querySelectorAll('#feed .card:not([data-obs])').forEach(c => { c.dataset.obs = 1; seenIO.observe(c); }); }
+function markSeen(id){
+  const p = S.posts.find(x => x.id === id);
+  if (!p || p.author === myId || p.post_views.some(v => v.member_id === myId)) return;
+  p.post_views.push({ post_id: id, member_id: myId }); seenQ.add(id);
+  clearTimeout(seenT); seenT = setTimeout(flushSeen, 1500);
+}
+async function flushSeen(){
+  const rows = [...seenQ].map(post_id => ({ post_id, member_id: myId })); seenQ.clear();
+  if (rows.length) await sb.from('post_views').upsert(rows, { onConflict: 'post_id,member_id', ignoreDuplicates: true });
+}
+
+
+/* ---------- Notifications push (même téléphone verrouillé) ---------- */
+const pushOK = () => 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window && !!CONFIG.VAPID_PUBLIC_KEY;
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+const standaloneNow = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+function b64u(str){ const p = '='.repeat((4 - str.length % 4) % 4), b = atob((str + p).replace(/-/g, '+').replace(/_/g, '/')); return Uint8Array.from(b, c => c.charCodeAt(0)); }
+async function subscribePush(){
+  const reg = await navigator.serviceWorker.ready;
+  let sub = await reg.pushManager.getSubscription();
+  if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64u(CONFIG.VAPID_PUBLIC_KEY) });
+  const j = sub.toJSON();
+  const { data, error } = await sb.rpc('save_push', { p_endpoint: j.endpoint, p_p256dh: j.keys.p256dh, p_auth: j.keys.auth });
+  if (error || !data) throw error || new Error('save');
+}
+async function enablePush(){
+  if (!pushOK()) return toast(isIOS && !standaloneNow()
+    ? 'Sur iPhone : installe d’abord l’appli sur l’écran d’accueil (bouton 📲 Installer), puis active les notifications depuis l’appli.'
+    : 'Les notifications ne sont pas disponibles sur ce navigateur 😕', 6000);
+  const perm = await Notification.requestPermission();
+  if (perm !== 'granted') return toast('Notifications refusées. Tu peux les autoriser dans les réglages du téléphone (Chrome → Notifications).', 5000);
+  try { await subscribePush(); localStorage.setItem('push', '1'); toast('Notifications activées 🔔 Tu seras prévenu(e) même téléphone verrouillé !', 4000); }
+  catch (e) { console.error(e); toast('Activation impossible pour le moment 😕', 4000); }
+  renderTop(); if (S.view === 'family') renderFamily();
+}
+async function disablePush(){
+  try { const reg = await navigator.serviceWorker.ready, sub = await reg.pushManager.getSubscription();
+    if (sub) { await sb.rpc('remove_push', { p_endpoint: sub.endpoint }); await sub.unsubscribe(); } } catch {}
+  localStorage.setItem('push', '0'); toast('Notifications désactivées sur cet appareil 🔕');
+}
+const pushOn = () => pushOK() && Notification.permission === 'granted' && localStorage.getItem('push') !== '0';
+async function syncPush(){ if (pushOn()) try { await subscribePush(); } catch {} }   // ré-enregistre l'appareil à chaque ouverture
+function notify(type, id){ sb.functions.invoke('notify', { body: { type, id } }).catch(() => {}); }
+
+/* ---------- Mois, en-tête, anniversaires, confettis ---------- */
+const localISO = (d = new Date()) => new Date(d - d.getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+const monthOf = p => new Date(p.created_at).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+const monthHTML = m => `<h3 class="month" data-month="${m}">${m.charAt(0).toUpperCase() + m.slice(1)}</h3>`;
+function withMonths(list){
+  return list.map(p => { const m = monthOf(p), h = m !== S.lastMonth ? monthHTML(m) : ''; S.lastMonth = m; return h + postHTML(p); }).join('');
+}
+function confetti(n = 70){
+  const cs = ['#E0684B', '#F3C677', '#9AD0C2', '#C8B6E2', '#FC6E62', '#7FB3E8'];
+  for (let i = 0; i < n; i++) { const c = document.createElement('i'); c.className = 'confetti';
+    c.style.left = Math.random() * 100 + 'vw'; c.style.background = cs[i % cs.length];
+    c.style.animationDuration = (2.2 + Math.random() * 2) + 's'; c.style.animationDelay = Math.random() * .7 + 's';
+    c.style.transform = `rotate(${Math.random() * 360}deg)`; document.body.appendChild(c); setTimeout(() => c.remove(), 5500); }
+}
+async function renderTop(){
+  const box = $('#hero'); let h = '';
+  const today = localISO();
+  const bdays = S.children.filter(k => k.birth_date && k.birth_date.slice(5) === today.slice(5) && k.birth_date < today);
+  bdays.forEach(k => { h += `<div class="bday"><div class="e">🎂</div><h2>Joyeux anniversaire ${esc(k.name)} !</h2><p>${ageAt(k.birth_date)} aujourd’hui 🎉 Laisse-lui un petit mot !</p></div>`; });
+  if (pushOK() && Notification.permission === 'default' && localStorage.getItem('pushLater') !== '1')
+    h += `<button class="notice" data-push><span class="e">🔔</span><span>Active les notifications pour être prévenu(e) des nouvelles photos, même téléphone verrouillé.</span></button>`;
+  else if (isIOS && !standaloneNow() && localStorage.getItem('pushLater') !== '1')
+    h += `<button class="notice" data-install><span class="e">📲</span><span>Installe l’appli sur ton écran d’accueil pour recevoir les notifications.</span></button>`;
+  if (!S.me.has_pin) h += `<button class="notice" data-setpin><span class="e">🔐</span><span>Choisis ton code perso à 4 chiffres : il te permettra de te reconnecter si tu changes de téléphone.</span></button>`;
+  const k = S.filter && child(S.filter);
+  if (k) {
+    const days = k.birth_date ? Math.floor((new Date(today) - new Date(k.birth_date)) / 864e5) : 0;
+    h += `<div class="hero-card"><div class="big">${esc(k.emoji)}</div><div><h2>${esc(k.name)}</h2>
+      <p>${k.birth_date ? ageAt(k.birth_date) : ''}<span id="k-count"></span></p>
+      ${days > 0 ? `<small>${days.toLocaleString('fr-FR')} jours de bonheur 💛</small>` : ''}</div></div>`;
+  }
+  box.innerHTML = h;
+  if (bdays.length && localStorage.getItem('bday') !== today) { localStorage.setItem('bday', today); setTimeout(() => confetti(90), 600); }
+  if (k) {
+    const { count } = await sb.from('posts').select('id', { count: 'exact', head: true }).eq('ready', true).contains('child_ids', [k.id]);
+    const el = $('#k-count'); if (el && count != null) el.textContent = `${k.birth_date ? ' · ' : ''}${count} souvenir${count > 1 ? 's' : ''}`;
+  }
+}
+$('#hero').addEventListener('click', e => {
+  if (e.target.closest('[data-setpin]')) pinForm();
+  if (e.target.closest('[data-push]')) enablePush();
+  if (e.target.closest('[data-install]')) { localStorage.setItem('pushLater', '1'); installApp(); renderTop(); }
+});
+function pinForm(){
+  let pin = '';
+  sheet(`<h2>🔐 Mon code perso</h2><p style="margin:0;color:var(--muted)">4 chiffres, pour te reconnecter si tu changes de téléphone ou si tu es déconnecté(e).</p>${pinPadHTML()}<div class="err" id="pf-err"></div>`, (el, close) => {
+    el.addEventListener('click', async e => {
+      const k = e.target.closest('[data-k]')?.dataset.k; if (!k) return;
+      if (k === 'del') pin = pin.slice(0, -1); else if (pin.length < 4) pin += k;
+      if (navigator.vibrate) navigator.vibrate(8);
+      el.querySelectorAll('.pin-dots i').forEach((d, i) => d.classList.toggle('on', i < pin.length));
+      if (pin.length === 4) {
+        const chosen = pin; pin = '';
+        const { data } = await sb.rpc('set_my_pin', { p_pin: chosen });
+        if (!data) { el.querySelector('#pf-err').textContent = 'Erreur, réessaie'; el.querySelectorAll('.pin-dots i').forEach(d => d.classList.remove('on')); return; }
+        S.me.has_pin = true; close(); renderTop(); toast(`Code perso enregistré : ${chosen} 🔐 Retiens-le bien !`, 5000);
+      }
+    });
+  });
+}
 $('#feed').addEventListener('scroll', e => {
   const car = e.target; if (!car.classList?.contains('car')) return;
   const i = Math.round(car.scrollLeft / car.clientWidth), card = car.closest('.card');
@@ -496,7 +803,8 @@ async function like(p, e){
   if (mine) { p.reactions = p.reactions.filter(r => r !== mine); rerender(p.id); await sb.from('reactions').delete().match({ post_id: p.id, member_id: myId }); }
   else { p.reactions.push({ post_id: p.id, member_id: myId, emoji:'❤️' }); rerender(p.id); hearts(e.clientX, e.clientY);
     if (navigator.vibrate) navigator.vibrate(15);
-    await sb.from('reactions').upsert({ post_id: p.id, member_id: myId }); }
+    const { error } = await sb.from('reactions').upsert({ post_id: p.id, member_id: myId });
+    if (!error) notify('like', p.id); }
 }
 
 function postMenu(p){
@@ -504,7 +812,8 @@ function postMenu(p){
   sheet(`<h2>Options</h2><div class="menu">
       ${p.media.length ? `<button data-m="dl">⬇️ Télécharger ${p.media.length > 1 ? `les ${p.media.length} fichiers` : (p.media[0].kind==='video'?'la vidéo':'la photo')}</button>` : ''}
       ${p.media.length ? `<button data-m="share">📤 Envoyer à quelqu'un</button>` : ''}
-      ${mine ? `<button data-m="edit">✏️ Modifier le texte</button><button data-m="del" class="danger">🗑️ Supprimer la publication</button>` : ''}
+      ${mine ? `<button data-m="edit">✏️ Modifier le texte</button>` : ''}
+      ${mine || S.me.is_admin ? `<button data-m="del" class="danger">🗑️ Supprimer la publication</button>` : ''}
       <button data-m="x">Fermer</button></div>`, (el, close) => {
     el.onclick = async e => {
       const m = e.target.closest('[data-m]')?.dataset.m; if (!m) return;
@@ -515,7 +824,7 @@ function postMenu(p){
       if (m === 'del') {
         if (!confirm('Supprimer définitivement cette publication ?')) return;
         close();
-        const paths = p.media.flatMap(m => [m.path, m.thumb_path]).filter(Boolean);
+        const paths = [...p.media.flatMap(m => [m.path, m.thumb_path]), ...p.comments.map(c => c.audio_path)].filter(Boolean);
         if (paths.length) await sb.storage.from(BUCKET).remove(paths);
         await sb.from('posts').delete().eq('id', p.id);
         S.posts = S.posts.filter(x => x !== p); document.querySelector(`.card[data-id="${p.id}"]`)?.remove();
@@ -585,7 +894,7 @@ function renderChips(){
     S.children.map(k => `<button class="chip ${S.filter === k.id ? 'on' : ''}" data-f="${k.id}">${esc(k.emoji)} ${esc(k.name)}</button>`).join('');
 }
 $('#chips').onclick = e => { const b = e.target.closest('[data-f]'); if (!b) return;
-  S.filter = b.dataset.f || null; renderChips(); if (S.view !== 'feed') go('feed'); window.scrollTo({ top: 0 }); loadPosts(true); };
+  S.filter = b.dataset.f || null; renderChips(); renderTop(); if (S.view !== 'feed') go('feed'); window.scrollTo({ top: 0 }); loadPosts(true); };
 
 /* ---------- Ce jour-là ---------- */
 async function loadMemories(){
@@ -616,10 +925,14 @@ function subscribe(){
     })
     .on('postgres_changes', { event: 'DELETE', schema: 'public', table: 'posts' }, ({ old }) => {
       S.posts = S.posts.filter(p => p.id !== old.id); document.querySelector(`.card[data-id="${old.id}"]`)?.remove(); })
-    .on('postgres_changes', { event: '*', schema: 'public', table: 'comments' }, async ({ new: n, old }) => {
+    .on('postgres_changes', { event: '*', schema: 'public', table: 'comments' }, async ({ eventType, new: n, old }) => {
       if (n?.author && !S.members[n.author]) await loadMembers();
+      if (eventType === 'INSERT' && n.author !== myId && S.posts.find(x => x.id === n.post_id)?.author === myId)
+        toast(`💬 ${member(n.author).name} a ${n.audio_path ? 'laissé un vocal sur' : 'commenté'} ta publication`, 3500);
       const pid = n?.post_id || S.posts.find(p => p.comments.some(c => c.id === old?.id))?.id; if (pid) refetch(pid); })
-    .on('postgres_changes', { event: '*', schema: 'public', table: 'reactions' }, ({ new: n, old }) => {
+    .on('postgres_changes', { event: '*', schema: 'public', table: 'reactions' }, ({ eventType, new: n, old }) => {
+      if (eventType === 'INSERT' && n.member_id !== myId && S.posts.find(x => x.id === n.post_id)?.author === myId)
+        toast(`❤️ ${member(n.member_id).name} adore ta publication`, 3000);
       const pid = n?.post_id || old?.post_id; if (pid && S.posts.some(p => p.id === pid)) refetch(pid); })
     .subscribe();
   document.addEventListener('visibilitychange', () => { if (!document.hidden && 'clearAppBadge' in navigator) navigator.clearAppBadge().catch(()=>{}); });
@@ -634,10 +947,13 @@ async function refetchNew(id){
   normalize(data);
   if (S.filter && !data.child_ids.includes(S.filter)) return data;
   if (!S.members[data.author]) await loadMembers();
-  await sign(data.media.map(m => m.thumb_path || (m.kind==='image'?m.path:null)));
+  await sign(pathsOf(data));
   S.posts.unshift(data);
   const feed = $('#feed'); if (feed.querySelector('.empty')) feed.innerHTML = '';
-  feed.insertAdjacentHTML('afterbegin', postHTML(data));
+  const mo = monthOf(data), top = feed.querySelector('.month');
+  if (top && top.dataset.month === mo) top.insertAdjacentHTML('afterend', postHTML(data));
+  else feed.insertAdjacentHTML('afterbegin', monthHTML(mo) + postHTML(data));
+  observeCards();
   return data;
 }
 
@@ -694,7 +1010,7 @@ function openComposer(){
         const wl = await navigator.wakeLock?.request('screen').catch(() => null);
         await publish({ caption: el.querySelector('#c-cap').value.trim(), child_ids: [...sel], taken_at: el.querySelector('#c-date').value || today },
           S.pending, (done, total, label) => { bar.style.width = (done / total * 100) + '%'; ptxt.textContent = label; });
-        wl?.release?.(); closeFn(); toast('C’est partagé ! 🎉');
+        wl?.release?.(); closeFn(); toast('C’est partagé ! 🎉'); confetti(50);
         if (navigator.vibrate) navigator.vibrate([20, 40, 20]);
       } catch (e) {
         console.error(e); wl?.release?.();
@@ -804,6 +1120,7 @@ async function publish(meta, files, onProg){
     }
     onProg(files.length, total, 'Dernière touche…');
     const { error } = await sb.from('posts').update({ ready: true }).eq('id', postId); if (error) throw error;
+    notify('post', postId);
     onProg(total, total, 'Terminé !');
     files.forEach(f => URL.revokeObjectURL(f._u));
     await refetchNew(postId);
@@ -898,11 +1215,14 @@ async function renderFamily(){
         <button class="x" data-delk="${k.id}">✕</button></div>`).join('') || '<p style="color:var(--muted);margin:0 0 8px">Ajoute les enfants pour pouvoir filtrer l’album et afficher leur âge sur chaque photo.</p>'}
       <div style="height:8px"></div><button class="btn ghost" data-addk>＋ Ajouter un enfant</button></div>
     <div class="sec"><h2>👪 La famille</h2>
-      ${mem.map(m => `<div class="mem"><div class="av">${esc(m.emoji)}</div><div><div class="n">${esc(m.name)}${m.id === myId ? ' (moi)' : ''}</div><small>Vu ${ago(m.last_seen)}</small></div></div>`).join('')}
+      ${mem.map(m => `<div class="mem"><div class="av">${esc(m.emoji)}</div><div><div class="n">${esc(m.name)}${m.id === myId ? ' (moi)' : ''}${m.is_admin ? '<span class="badge">👑 Admin</span>' : ''}</div><small>Vu ${ago(m.last_seen)}</small></div>
+        ${S.me.is_admin && m.id !== myId ? `<button class="x" data-admin="${m.id}" aria-label="Gérer">⋯</button>` : ''}</div>`).join('')}
       <div style="height:8px"></div><button class="btn" data-invite>💌 Inviter quelqu’un</button></div>
     <div class="sec"><h2>⚙️ Réglages</h2>
+      ${pushOK() || isIOS ? `<div class="toggle">🔔 Notifications sur ce téléphone <button class="sw ${pushOn() ? 'on' : ''}" data-push></button></div>` : ''}
       <div class="toggle">Grand texte <button class="sw ${document.documentElement.classList.contains('big') ? 'on' : ''}" data-big></button></div>
       <div class="toggle">Mon profil <button class="chip" data-prof>${esc(me?.emoji)} ${esc(me?.name)} ✏️</button></div>
+      <div class="toggle">Mon code perso <button class="chip" data-mypin>${S.me.has_pin ? '🔐 Changer' : '⚠️ À créer'}</button></div>
       <div style="height:8px"></div><button class="btn ghost" data-out>Se déconnecter de cet appareil</button></div>`;
 }
 $('#v-family').addEventListener('click', async e => {
@@ -912,8 +1232,42 @@ $('#v-family').addEventListener('click', async e => {
   if (t.dataset.addk !== undefined) childForm();
   if (t.dataset.invite !== undefined) invite();
   if (t.dataset.prof !== undefined) profileForm();
-  if (t.dataset.out !== undefined) { if (confirm('Te déconnecter ? Il faudra retaper le code familial.')) { await sb.auth.signOut(); localStorage.removeItem('lastSeen'); location.reload(); } }
+  if (t.dataset.push !== undefined) { if (pushOn()) { await disablePush(); renderFamily(); } else enablePush(); }
+  if (t.dataset.admin) adminMenu(t.dataset.admin);
+  if (t.dataset.mypin !== undefined) pinForm();
+  if (t.dataset.out !== undefined) {
+    if (!S.me.has_pin) { toast('Crée d’abord ton code perso, sinon tu ne pourras pas revenir sous ton nom 🔐', 4500); return pinForm(); }
+    if (confirm('Te déconnecter de cet appareil ? Pour revenir : le code familial, puis ton prénom et ton code perso.')) {
+      await sb.rpc('leave_device'); await sb.auth.signOut(); localStorage.removeItem('lastSeen'); location.reload();
+    }
+  }
 });
+function adminMenu(id){
+  const m = S.members[id]; if (!m) return;
+  sheet(`<h2>${esc(m.emoji)} ${esc(m.name)}</h2><div class="menu">
+      <button data-a="pin">🔐 Lui créer un nouveau code perso</button>
+      <button data-a="adm">${m.is_admin ? '👤 Retirer le rôle admin' : '👑 Nommer admin'}</button>
+      <button data-a="rm" class="danger">🚪 Retirer de l'album</button>
+      <button data-a="x">Fermer</button></div>`, (el, close) => {
+    el.onclick = async e => {
+      const a = e.target.closest('[data-a]')?.dataset.a; if (!a) return;
+      if (a === 'x') return close();
+      if (a === 'pin') {
+        const { data, error } = await sb.rpc('reset_pin', { p_member: id }); if (error) return toast('Erreur 😕');
+        el.innerHTML = `<div class="grab"></div><h2>Nouveau code de ${esc(m.name)}</h2>
+          <p>Donne-lui ce code : pour se reconnecter, il suffit de taper le code familial, de toucher son prénom puis ce code.</p>
+          <div class="pinbox">${esc(data)}</div><button class="btn" data-a="x">C'est noté 👍</button>`;
+      }
+      if (a === 'adm') { await sb.rpc('set_admin', { p_member: id, p_value: !m.is_admin }); close(); renderFamily(); toast(m.is_admin ? 'Rôle admin retiré' : `${m.name} est maintenant admin 👑`); }
+      if (a === 'rm') {
+        if (!confirm(`Retirer ${m.name} de l'album ?\n\nSes appareils seront déconnectés tout de suite (ses photos restent). S'il ou elle connaît le code familial, pense à le changer.`)) return;
+        const { data, error } = await sb.rpc('remove_member', { p_member: id });
+        if (error || !data) return toast('Impossible 😕');
+        close(); toast(`${m.name} a été retiré(e) de l'album`); renderFamily();
+      }
+    };
+  });
+}
 function childForm(){
   let pick = CHILD_EMOJIS[0];
   sheet(`<h2>Ajouter un enfant</h2>
@@ -925,7 +1279,7 @@ function childForm(){
     el.querySelector('#k-save').onclick = async () => {
       const name = el.querySelector('#k-name').value.trim(); if (!name) return toast('Il manque le prénom');
       const { error } = await sb.from('children').insert({ name, emoji: pick, birth_date: el.querySelector('#k-birth').value || null });
-      if (error) return toast('Erreur 😕'); close(); await renderFamily(); renderChips(); toast(`${pick} ${name} ajouté(e) !`);
+      if (error) return toast('Erreur 😕'); close(); await renderFamily(); renderChips(); renderTop(); toast(`${pick} ${name} ajouté(e) !`);
     };
   });
 }
@@ -938,7 +1292,7 @@ function profileForm(){
     el.querySelector('#p-save').onclick = async () => {
       const name = el.querySelector('#p-name').value.trim(); if (!name) return;
       const { error } = await sb.from('members').update({ name, emoji: pick }).eq('id', myId); if (error) return toast('Erreur 😕');
-      close(); $('#me-btn').textContent = pick; await renderFamily(); $('#feed').innerHTML = S.posts.map(postHTML).join('');
+      close(); $('#me-btn').textContent = pick; await renderFamily(); S.lastMonth = null; $('#feed').innerHTML = withMonths(S.posts); observeCards();
     };
   });
 }
